@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-arabic: "Cairo", sans-serif;
+  --color-liver: #671d1d;
+  --color-liver-light: #8b2d2d;
+  --color-liver-dark: #432E18;
+  --color-gold: #D4AF37;
+  
+  --breakpoint-xs: 400px;
+}
+
+@layer base {
+  body {
+    @apply font-arabic bg-[#FDFCF0] text-liver-dark;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
