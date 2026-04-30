@@ -9,7 +9,7 @@ export const MENU_DATA = [
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ananas (1).jpg'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1628102422204-79fa7630737a?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ananas (1).jpg'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const MENU_DATA = [
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ananas (1).jpg'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const MENU_DATA = [
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1599599810694-b5b3a44a974b?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ananas (1).jpg'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const MENU_DATA = [
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop'
+    image: '/images/ananas (1).jpg'
   },
 
   // --- البيتزا ---
@@ -66,7 +66,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: '/images/hot_dog_pizza.jpg'
+    image: '/images/WhatsApp Image 2026-04-28 at 17.23.01.jpeg'
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop'
+    image: '/images/WhatsApp Image 2026-04-28 at 17.23.00.jpeg'
   },
   {
     id: 8,
@@ -111,7 +111,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 22000 }
     ],
     price: 22000,
-    image: 'https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?q=80&w=800&auto=format&fit=crop'
+    image: '/images/WhatsApp Image 2026-04-28 at 17.23.01 (1).jpeg'
   },
   {
     id: 10,
@@ -141,7 +141,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=80&w=800&auto=format&fit=crop'
+    image: 'images/pizza-margraeta.jpeg'
   },
 
   // --- العصائر ---
@@ -153,7 +153,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
     price: 5000,
-    image: 'https://images.unsplash.com/photo-1589733901241-5e5da4bbdc34?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (4).webp'
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
     price: 5000,
-    image: 'https://images.unsplash.com/photo-1525385133512-2f3bdd039054?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (5).webp'
   },
   {
     id: 13,
@@ -173,7 +173,7 @@ export const MENU_DATA = [
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 5000,
-    image: 'https://images.unsplash.com/photo-1591240409141-26880097f480?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (6).webp'
   },
   {
     id: 14,
@@ -183,7 +183,7 @@ export const MENU_DATA = [
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
     price: 3500,
-    image: 'https://images.unsplash.com/photo-1626078299034-7389656c0755?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (3).webp'
   },
   {
     id: 15,
@@ -193,7 +193,7 @@ export const MENU_DATA = [
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
     price: 5000,
-    image: 'https://images.unsplash.com/photo-1523472721958-84ec0483848b?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (1).webp'
   },
   {
     id: 16,
@@ -203,7 +203,7 @@ export const MENU_DATA = [
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
     price: 6000,
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=800&auto=format&fit=crop'
+    image: 'images/ananas (2).webp'
   }
 ];
 
