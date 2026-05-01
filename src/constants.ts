@@ -9,7 +9,7 @@ export const MENU_DATA = [
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
     price: 12000,
-    image: '/images/ananas (1).jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
     price: 12000,
-    image: '/images/ananas (1).jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const MENU_DATA = [
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
     price: 12000,
-    image: '/images/ananas (1).jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const MENU_DATA = [
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
     price: 12000,
-    image: '/images/ananas (1).jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const MENU_DATA = [
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
     price: 12000,
-    image: '/images/ananas (1).jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
 
   // --- البيتزا ---
@@ -66,7 +66,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: '/images/WhatsApp Image 2026-04-28 at 17.23.01.jpeg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: '/images/WhatsApp Image 2026-04-28 at 17.23.00.jpeg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://th.bing.com/th/id/OIP.Gwdl4VkRKtyFSr6bxaexUQHaE5?w=239&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 22000 }
     ],
     price: 22000,
-    image: '/images/WhatsApp Image 2026-04-28 at 17.23.01 (1).jpeg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
   },
   {
     id: 10,
