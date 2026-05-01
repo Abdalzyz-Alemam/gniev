@@ -96,7 +96,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=800&auto=format&fit=crop'
+    image: 'https://th.bing.com/th/id/OIP.Gwdl4VkRKtyFSr6bxaexUQHaE5?w=239&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3'
   },
   {
     id: 9,
@@ -126,7 +126,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop'
+    image: 'https://tse4.mm.bing.net/th/id/OIP.-QE9gkC0mHdP2AD3g4PrcwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'
   },
   {
     id: 17,
@@ -141,7 +141,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'images/pizza-margraeta.jpeg'
+    image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
   },
 
   // --- العصائر ---
