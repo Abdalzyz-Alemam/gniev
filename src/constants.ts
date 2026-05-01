@@ -126,7 +126,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://tse4.mm.bing.net/th/id/OIP.-QE9gkC0mHdP2AD3g4PrcwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
   },
   {
     id: 17,
@@ -153,7 +153,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
     price: 5000,
-    image: 'images/ananas (4).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
     price: 5000,
-    image: 'images/ananas (5).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
   },
   {
     id: 13,
@@ -173,7 +173,7 @@ export const MENU_DATA = [
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 5000,
-    image: 'images/ananas (6).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
   },
   {
     id: 14,
@@ -183,7 +183,7 @@ export const MENU_DATA = [
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
     price: 3500,
-    image: 'images/ananas (3).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
   },
   {
     id: 15,
@@ -193,7 +193,7 @@ export const MENU_DATA = [
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
     price: 5000,
-    image: 'images/ananas (1).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
   },
   {
     id: 16,
@@ -203,7 +203,7 @@ export const MENU_DATA = [
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
     price: 6000,
-    image: 'images/ananas (2).webp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
   }
 ];
 
