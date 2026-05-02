@@ -9,7 +9,7 @@ export const MENU_DATA = [
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/fv1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const MENU_DATA = [
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 4,
