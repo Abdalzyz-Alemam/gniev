@@ -39,7 +39,7 @@ export const MENU_DATA = [
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const MENU_DATA = [
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
 
   // --- البيتزا ---
@@ -66,7 +66,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 22000 }
     ],
     price: 22000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
   },
   {
     id: 10,
@@ -126,7 +126,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
   },
   {
     id: 17,
@@ -153,7 +153,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
   },
   {
     id: 13,
@@ -173,7 +173,7 @@ export const MENU_DATA = [
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
   },
   {
     id: 14,
@@ -183,7 +183,7 @@ export const MENU_DATA = [
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
     price: 3500,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
   },
   {
     id: 15,
@@ -193,7 +193,7 @@ export const MENU_DATA = [
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
   },
   {
     id: 16,
@@ -203,7 +203,7 @@ export const MENU_DATA = [
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
     price: 6000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
   }
 ];
 
