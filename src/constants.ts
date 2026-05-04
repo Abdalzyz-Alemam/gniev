@@ -8,7 +8,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية قنيف', description: 'فطيرة مميزة بحشوة قنيف الخاصة' },
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
-    price: 12000,
+    price: 14000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -18,7 +18,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية هوت دوق', description: 'فطيرة شامية بحشوة الهوت دوق' },
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
-    price: 12000,
+    price: 14000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -28,7 +28,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية فراخ', description: 'فطيرة شامية بحشوة الدجاج المتبل' },
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
-    price: 12000,
+    price: 14000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -38,7 +38,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية لحمة', description: 'فطيرة شامية بحشوة اللحم المفروم' },
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
-    price: 12000,
+    price: 14000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -48,7 +48,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية خضار', description: 'فطيرة شامية تشكيلة خضروات طازجة' },
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
-    price: 12000,
+    price: 14000,
     image:  'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
 
@@ -61,11 +61,11 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Pizza', description: 'Fluffy pizza topped with delicious hot dog pieces' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 34000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 30000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 35000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 31000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 28000 }
     ],
-    price: 27000,
+    price: 28000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
   },
   {
@@ -76,11 +76,11 @@ export const MENU_DATA = [
       en: { name: 'Chicken Pizza', description: 'Marinated chicken pieces with mayo and cheese' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 34000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 30000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 35000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 31000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 28000 }
     ],
-    price: 27000,
+    price: 28000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
   },
   {
@@ -91,11 +91,11 @@ export const MENU_DATA = [
       en: { name: 'Meat Pizza', description: 'Fresh minced meat with a variety of veggies' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 34000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 30000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 35000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 31000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 28000 }
     ],
-    price: 27000,
+    price: 28000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
   },
   {
@@ -106,11 +106,11 @@ export const MENU_DATA = [
       en: { name: 'Veggie Pizza', description: 'Thin dough topped with delicious fresh vegetables' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 27000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 24000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 22000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 28000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 25000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 23000 }
     ],
-    price: 22000,
+    price: 23000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
   },
   {
@@ -121,11 +121,11 @@ export const MENU_DATA = [
       en: { name: 'Gneif Pizza', description: 'Signature pizza with special Gneif toppings' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 34000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 30000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 35000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 31000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 28000 }
     ],
-    price: 27000,
+    price: 28000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
   },
   {
@@ -136,11 +136,11 @@ export const MENU_DATA = [
       en: { name: 'Margherita Pizza', description: 'Classic Italian pizza with tomato sauce and mozzarella' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 34000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 30000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 35000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 31000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 28000 }
     ],
-    price: 27000,
+    price: 28000,
     image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
   },
 
@@ -152,7 +152,7 @@ export const MENU_DATA = [
       ar: { name: 'عصير فراولة', description: '5,000 SDG' },
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
-    price: 5000,
+    price: 6000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
   },
   {
@@ -162,7 +162,7 @@ export const MENU_DATA = [
       ar: { name: 'فراولة بالموز', description: '5,000 SDG' },
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
-    price: 5000,
+    price: 6000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
   },
   {
@@ -172,7 +172,7 @@ export const MENU_DATA = [
       ar: { name: 'عصير مانجو', description: '5,000 SDG' },
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
-    price: 5000,
+    price: 6000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
   },
   {
@@ -192,7 +192,7 @@ export const MENU_DATA = [
       ar: { name: 'عصير أناناس', description: '5,000 SDG' },
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
-    price: 5000,
+    price: 6000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
   },
   {
