@@ -240,7 +240,7 @@ export const UI_STRINGS = {
         number: '86460',
         name: 'انور الشيخ حسن الطاهر',
         extra: 'BBAN: 08110068440101',
-        subExtra: 'فرع المصارف',
+        subExtra: 'فرع القضارف',
         type: 'sahil',
         copyLabel: 'نسخ الرقم'
       }
