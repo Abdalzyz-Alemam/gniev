@@ -9,7 +9,7 @@ export const MENU_DATA = [
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://images.unsplash.com/photo-1628102422204-79fa7630737a?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const MENU_DATA = [
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const MENU_DATA = [
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://images.unsplash.com/photo-1599599810694-b5b3a44a974b?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const MENU_DATA = [
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop'
   },
 
   // --- البيتزا ---
@@ -66,7 +66,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
+    image: '/images/hot_dog_pizza.jpg'
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
+    image: 'https://img.youm7.com/ArticleImgs/2021/2/7/148721-%D8%B7%20%D8%B1%D9%8A%D9%82%D8%A9-%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%D8%B2%D8%A7-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%AE---%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9.jpg'
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
+    image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 22000 }
     ],
     price: 22000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
+    image: 'https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 10,
@@ -126,7 +126,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 17,
@@ -141,7 +141,7 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
+    image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=80&w=800&auto=format&fit=crop'
   },
 
   // --- العصائر ---
@@ -153,7 +153,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
+    image: 'https://images.unsplash.com/photo-1589733901241-5e5da4bbdc34?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const MENU_DATA = [
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
+    image: 'https://images.unsplash.com/photo-1525385133512-2f3bdd039054?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 13,
@@ -173,7 +173,7 @@ export const MENU_DATA = [
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
+    image: 'https://images.unsplash.com/photo-1591240409141-26880097f480?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 14,
@@ -183,7 +183,7 @@ export const MENU_DATA = [
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
     price: 3500,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
+    image: 'https://images.unsplash.com/photo-1626078299034-7389656c0755?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 15,
@@ -193,7 +193,7 @@ export const MENU_DATA = [
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
+    image: 'https://images.unsplash.com/photo-1523472721958-84ec0483848b?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 16,
@@ -203,7 +203,7 @@ export const MENU_DATA = [
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
     price: 6000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
+    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
@@ -221,7 +221,35 @@ export const UI_STRINGS = {
       pies: 'الفطائر الشامية',
       juices: 'العصائر'
     },
-    itemsFound: 'منتجات'
+    itemsFound: 'منتجات',
+    paymentTitle: 'وسائل الدفع المتاحة',
+    paymentSubtitle: 'يمكنك الدفع بسهولة عبر التطبيقات البنكية',
+    paymentNote: 'يرجى إرسال صورة الإشعار عبر الواتساب لتأكيد الطلب',
+    paymentAccounts: [
+      {
+        id: 'bankak',
+        app: 'تطبيق بنكك - Bankak',
+        number: '3504338',
+        name: 'باسم: حسن بلة على بلة',
+        type: 'bankak',
+        copyLabel: 'نسخ الرقم'
+      },
+      {
+        id: 'sahil',
+        app: 'تطبيق ساهل - Sahil',
+        number: '86460',
+        name: 'انور الشيخ حسن الطاهر',
+        extra: 'BBAN: 08110068440101',
+        subExtra: 'فرع المصارف',
+        type: 'sahil',
+        copyLabel: 'نسخ بمبلغ'
+      }
+    ],
+    notification: {
+      title: 'عفواً زبائننا الكرام',
+      message: 'لتسهيل طلباتكم، نود إحاطتكم بأنه يمكنكم الآن الدفع عبر تطبيقاتنا البنكية مباشرة (بنكك وساهل). تجدون أرقام التحويل أسفل صفحة المنيو. نسعد دائماً بخدمتكم!',
+      button: 'حسناً، فهمت'
+    }
   },
   en: {
     title: 'Qunaif Pizza & Pies',
@@ -235,6 +263,34 @@ export const UI_STRINGS = {
       pies: 'Shami Pies',
       juices: 'Juices'
     },
-    itemsFound: 'items'
+    itemsFound: 'items',
+    paymentTitle: 'Available Payment Methods',
+    paymentSubtitle: 'Pay easily through banking applications',
+    paymentNote: 'Please send a notification screenshot via WhatsApp to confirm',
+    paymentAccounts: [
+      {
+        id: 'bankak',
+        app: 'Bankak - تطبيق بنكك',
+        number: '3504338',
+        name: 'Name: Hassan Bella Ali Bella',
+        type: 'bankak',
+        copyLabel: 'Copy Number'
+      },
+      {
+        id: 'sahil',
+        app: 'Sahil - تطبيق ساهل',
+        number: '86460',
+        name: 'Anwar Al-Sheikh Hassan Al-Tahir',
+        extra: 'BBAN: 08110068440101',
+        subExtra: 'Banking Branch',
+        type: 'sahil',
+        copyLabel: 'Copy Amount'
+      }
+    ],
+    notification: {
+      title: 'Dear Customers',
+      message: 'To facilitate your orders, we would like to inform you that you can now pay directly via our banking applications (Bankak & Sahil). You can find the transfer numbers at the bottom of the menu page. We are always happy to serve you!',
+      button: 'Okay, I understand'
+    }
   }
 };

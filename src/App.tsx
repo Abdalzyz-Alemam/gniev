@@ -4,9 +4,9 @@
  */
 
 // استيراد المكتبات والمكونات اللازمة لبناء التطبيق
-import { useState, useMemo, lazy, Suspense } from 'react';
+import { useState, useMemo, lazy, Suspense, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost } from 'lucide-react';
+import { Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing } from 'lucide-react';
 import { MENU_DATA, UI_STRINGS } from './constants';
 
 import ProductModal from './components/ProductModal';
@@ -28,9 +28,23 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [showNotification, setShowNotification] = useState(false);
 
   const t = UI_STRINGS[lang];
   const isRtl = lang === 'ar';
+
+  useEffect(() => {
+    // إزالة التنبيه التلقائي بالوقت
+  }, []);
+
+  const enterMenu = () => {
+    setShowWelcome(false);
+    setShowNotification(true);
+  };
+
+  const handleCloseNotification = () => {
+    setShowNotification(false);
+  };
 
   const welcome = {
     ar: {
@@ -56,6 +70,20 @@ export default function App() {
   }, [selectedCategory, searchQuery]);
 
   const categories = Object.entries(t.categories);
+
+  const copyToClipboard = (text: string, id: string) => {
+    navigator.clipboard.writeText(text);
+    const btn = document.getElementById(`copy-btn-${id}`);
+    if (btn) {
+      const originalText = btn.innerText;
+      btn.innerText = lang === 'ar' ? 'تم النسخ!' : 'Copied!';
+      btn.classList.add('bg-green-600');
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.classList.remove('bg-green-600');
+      }, 2000);
+    }
+  };
 
   return (
     <div 
@@ -153,18 +181,18 @@ export default function App() {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                onClick={() => setShowWelcome(false)}
+                onClick={enterMenu}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-4 py-3 px-8 md:py-3.5 md:px-10 bg-liver-light text-liver rounded-full font-bold text-xs md:text-sm overflow-hidden shadow-[0_15px_40px_-10px_rgba(209,171,83,0.3)] hover:shadow-liver-light/20 transition-all border border-white/20"
+                className="group relative inline-flex items-center gap-4 py-3 px-8 md:py-3.5 md:px-10 bg-liver text-gold rounded-full font-bold text-xs md:text-sm overflow-hidden shadow-[0_15px_40px_-10px_rgba(0,0,0,0.3)] hover:shadow-liver/30 transition-all border border-white/20"
               >
-                <span className="relative z-10 font-arabic font-black">{welcome.button}</span>
+                <span className="relative z-10 font-arabic font-black tracking-wide uppercase drop-shadow-sm text-gold">{welcome.button}</span>
                 
-                <div className="relative z-10 w-6 h-6 md:w-7 md:h-7 rounded-full bg-liver flex items-center justify-center transition-all group-hover:bg-black">
+                <div className="relative z-10 w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all group-hover:bg-gold group-hover:text-liver">
                    <motion.span 
                     animate={{ x: isRtl ? [2, -2, 2] : [-2, 2, -2] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="text-white text-[9px]"
+                    className="text-gold group-hover:text-liver text-[9px] font-bold"
                    >
                      {isRtl ? '←' : '→'}
                    </motion.span>
@@ -212,6 +240,51 @@ export default function App() {
                 <span className="font-light">تم التطوير بواسطة</span>
                 <span className="font-black text-liver-light">Ezoo-Tech</span>
               </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* تنبيه وسائل الدفع - تصميم من الصورة */}
+      <AnimatePresence>
+        {showNotification && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[110] flex items-center justify-center p-6 bg-black/80 backdrop-blur-md"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: 20, opacity: 0 }}
+              className="max-w-md w-full bg-[#1a1f2e] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10"
+            >
+              <div className="bg-[#500b0b] p-8 flex flex-col items-center gap-4 relative overflow-hidden text-center">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-black/20 rounded-full blur-2xl" />
+                
+                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white/80 border border-white/20 backdrop-blur-sm shadow-inner relative z-10 mx-auto">
+                  <BellRing size={28} className="animate-bounce" />
+                </div>
+                
+                <h3 className="text-xl md:text-2xl font-black text-white font-arabic relative z-10 w-full">
+                  {(t as any).notification.title}
+                </h3>
+              </div>
+              
+              <div className="p-8 pt-6 flex flex-col items-center gap-8">
+                <p className="text-white/70 text-sm md:text-base font-arabic font-light leading-relaxed text-center">
+                  {(t as any).notification.message}
+                </p>
+                
+                <button
+                  onClick={handleCloseNotification}
+                  className="w-full py-4 px-6 bg-[#500b0b] hover:bg-[#600c0c] text-white rounded-2xl font-arabic font-bold text-sm md:text-base transition-all shadow-lg shadow-black/40 border border-white/5 flex items-center justify-center"
+                >
+                  {(t as any).notification.button}
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}
@@ -436,13 +509,109 @@ export default function App() {
       </AnimatePresence>
 
       {/* 6. الفوتر (Footer) - تصميم عصري ملكي مدمج */}
-      <footer className="bg-[#1a0505] text-white py-10 mt-10 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full">
-           <div className="h-[1px] bg-gradient-to-r from-transparent via-liver-light/40 to-transparent" />
+      <footer className="bg-[#1a0505] text-white pt-16 pb-10 mt-10 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c11.13,3.75,22,12.24,31.57,21.57s16.48,19,25.43,28.61c1.9,2,3.8,4.09,5.74,6.2H1200V0H0V105.75c13.78-10.23,28-20,44.25-23s33-2,48.16,6.33,26.47,21.11,38,33.51a146.49,146.49,0,0,0,26.79,23.1c11.1-7.14,21.84-15,31.42-23c23.23-19.46,43.3-39.73,73.13-43.14S303.49,50.4,321.39,56.44Z" fill="#FDFCF0" opacity="1"></path>
+          </svg>
         </div>
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
-          <div className="mb-6 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
+          
+          {/* قسم وسائل الدفع - تصميم من الصورة */}
+          <div className="mb-20 bg-black/30 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-6 md:p-10 shadow-2xl overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-liver-light/50 to-transparent" />
+            
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
+              <div className="text-center md:text-right">
+                <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-liver-light/20 flex items-center justify-center text-liver-light transform rotate-3">
+                    <Wallet size={24} />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black font-arabic text-white">{t.paymentTitle}</h3>
+                </div>
+                <p className="text-white/60 text-sm md:text-base font-arabic font-light leading-relaxed">
+                  {t.paymentSubtitle}
+                </p>
+              </div>
+              
+              <div className="hidden md:block">
+                 <div className="w-16 h-16 rounded-full border-2 border-white/5 flex items-center justify-center opacity-20">
+                    <div className="w-10 h-10 rounded-full border border-white/10" />
+                 </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {(t.paymentAccounts as any[]).map((acc) => (
+                <div 
+                  key={acc.id} 
+                  className="bg-[#240a0a] rounded-[2rem] p-6 border border-white/5 hover:border-white/10 transition-all group relative overflow-hidden"
+                >
+                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-liver-light/5 rounded-full blur-3xl group-hover:bg-liver-light/10 transition-all" />
+                  
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    {/* أيقونة التطبيق */}
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/5 flex items-center justify-center text-liver-light shadow-inner mb-2">
+                      {acc.type === 'bankak' ? <Landmark size={32} /> : <Smartphone size={32} />}
+                    </div>
+
+                    {/* اسم التطبيق */}
+                    <div className="inline-flex items-center px-4 py-1 rounded-full bg-liver/30 border border-liver-light/20 text-[10px] md:text-xs font-arabic text-liver-light font-bold">
+                       {acc.app}
+                    </div>
+
+                    {/* الرقم */}
+                    <div className="text-3xl md:text-4xl font-black text-white font-sans tracking-wider py-2">
+                      {acc.number}
+                    </div>
+
+                    {/* الاسم والمعلومات الإضافية */}
+                    <div className="space-y-1">
+                      <p className="text-white/80 text-xs md:text-sm font-arabic font-medium">
+                        {acc.name}
+                      </p>
+                      {acc.extra && (
+                        <p className="text-white/40 text-[10px] font-mono uppercase tracking-widest">
+                          {acc.extra}
+                        </p>
+                      )}
+                      {acc.subExtra && (
+                        <p className="text-white/30 text-[10px] font-arabic font-light">
+                          {acc.subExtra}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* زر النسخ */}
+                    <button 
+                      id={`copy-btn-${acc.id}`}
+                      onClick={() => copyToClipboard(acc.number, acc.id)}
+                      className={`w-full max-w-[180px] mt-4 flex items-center justify-center gap-2 py-3 px-6 rounded-2xl transition-all duration-300 font-arabic font-bold text-xs md:text-sm shadow-lg ${
+                        acc.type === 'sahil' 
+                          ? 'bg-gold hover:bg-gold/90 text-[#432E18] shadow-gold/20' 
+                          : 'bg-liver-light hover:bg-liver text-white shadow-liver/30'
+                      }`}
+                    >
+                      <Copy size={16} />
+                      {acc.copyLabel}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col items-center gap-4">
+               <div className="flex items-center gap-2 text-white/50 animate-pulse">
+                  <MessageCircle size={14} />
+                  <p className="text-[10px] md:text-xs font-arabic font-light tracking-wide italic">
+                    {t.paymentNote}
+                  </p>
+               </div>
+            </div>
+          </div>
+
+          <div className="mb-8 text-center">
              <div className="mb-2 inline-block">
                 <span className="text-lg md:text-xl font-black text-liver-light font-arabic tracking-[0.1em]">
                   {t.title}
