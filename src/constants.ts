@@ -202,7 +202,7 @@ export const MENU_DATA = [
       ar: { name: 'مشكل', description: '6,000 SDG' },
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
-    price: 6000,
+    price: 7000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
   }
 ];
