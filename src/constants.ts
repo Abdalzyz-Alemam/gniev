@@ -9,7 +9,7 @@ export const MENU_DATA = [
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ export const MENU_DATA = [
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
     price: 12000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
+    image:  'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
 
   // --- البيتزا ---
@@ -129,7 +129,7 @@ export const MENU_DATA = [
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
   },
   {
-    id: 17,
+    id: 11,
     category: 'pizza',
     translations: {
       ar: { name: 'بيتزا مارقريتا', description: 'البيتزا الإيطالية الكلاسيكية بصلصة الطماطم والجبنة' },
@@ -141,12 +141,12 @@ export const MENU_DATA = [
       { label: { ar: 'وسط', en: 'Medium' }, price: 27000 }
     ],
     price: 27000,
-    image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3''
+    image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
   },
 
   // --- العصائر ---
   {
-    id: 11,
+    id: 12,
     category: 'juices',
     translations: {
       ar: { name: 'عصير فراولة', description: '5,000 SDG' },
@@ -156,7 +156,7 @@ export const MENU_DATA = [
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_l7imxh.jpg'
   },
   {
-    id: 12,
+    id: 13,
     category: 'juices',
     translations: {
       ar: { name: 'فراولة بالموز', description: '5,000 SDG' },
@@ -166,17 +166,17 @@ export const MENU_DATA = [
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661455/WhatsApp_Image_2026-04-30_at_12.18.10_efymrj.jpg'
   },
   {
-    id: 13,
+    id: 14,
     category: 'juices',
     translations: {
       ar: { name: 'عصير مانجو', description: '5,000 SDG' },
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 5000,
-    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpgp'
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_1_lmwpkp.jpg'
   },
   {
-    id: 14,
+    id: 15,
     category: 'juices',
     translations: {
       ar: { name: 'موز باللبن', description: '3,500 SDG' },
@@ -186,7 +186,7 @@ export const MENU_DATA = [
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
   },
   {
-    id: 15,
+    id: 16,
     category: 'juices',
     translations: {
       ar: { name: 'عصير أناناس', description: '5,000 SDG' },
@@ -196,7 +196,7 @@ export const MENU_DATA = [
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661454/WhatsApp_Image_2026-04-30_at_12.18.11_2_fhzw8z.jpg'
   },
   {
-    id: 16,
+    id: 17,
     category: 'juices',
     translations: {
       ar: { name: 'مشكل', description: '6,000 SDG' },
