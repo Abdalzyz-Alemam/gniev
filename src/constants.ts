@@ -242,7 +242,7 @@ export const UI_STRINGS = {
         extra: 'BBAN: 08110068440101',
         subExtra: 'فرع المصارف',
         type: 'sahil',
-        copyLabel: 'نسخ بمبلغ'
+        copyLabel: 'نسخ الرقم'
       }
     ],
     notification: {
@@ -284,7 +284,7 @@ export const UI_STRINGS = {
         extra: 'BBAN: 08110068440101',
         subExtra: 'Banking Branch',
         type: 'sahil',
-        copyLabel: 'Copy Amount'
+        copyLabel: 'Copy Number'
       }
     ],
     notification: {
