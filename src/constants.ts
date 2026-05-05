@@ -149,7 +149,7 @@ export const MENU_DATA = [
     id: 12,
     category: 'juices',
     translations: {
-      ar: { name: 'عصير فراولة', description: '5,000 SDG' },
+      ar: { name: 'عصير فراولة', description: '' },
       en: { name: 'Strawberry Juice', description: 'Fresh strawberry blend' }
     },
     price: 6000,
@@ -159,7 +159,7 @@ export const MENU_DATA = [
     id: 13,
     category: 'juices',
     translations: {
-      ar: { name: 'فراولة بالموز', description: '5,000 SDG' },
+      ar: { name: 'فراولة بالموز', description: '' },
       en: { name: 'Strawberry & Banana', description: 'Strawberry and banana blend' }
     },
     price: 6000,
@@ -169,7 +169,7 @@ export const MENU_DATA = [
     id: 14,
     category: 'juices',
     translations: {
-      ar: { name: 'عصير مانجو', description: '5,000 SDG' },
+      ar: { name: 'عصير مانجو', description: '' },
       en: { name: 'Mango Juice', description: 'Fresh mango pulp' }
     },
     price: 6000,
@@ -179,7 +179,7 @@ export const MENU_DATA = [
     id: 15,
     category: 'juices',
     translations: {
-      ar: { name: 'موز باللبن', description: '3,500 SDG' },
+      ar: { name: 'موز باللبن', description: '' },
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
     price: 3500,
@@ -189,7 +189,7 @@ export const MENU_DATA = [
     id: 16,
     category: 'juices',
     translations: {
-      ar: { name: 'عصير أناناس', description: '5,000 SDG' },
+      ar: { name: 'عصير أناناس', description: '' },
       en: { name: 'Pineapple Juice', description: 'Freshly squeezed pineapple' }
     },
     price: 6000,
@@ -199,7 +199,7 @@ export const MENU_DATA = [
     id: 17,
     category: 'juices',
     translations: {
-      ar: { name: 'مشكل', description: '6,000 SDG' },
+      ar: { name: 'مشكل', description: '' },
       en: { name: 'Mixed Fruit Juice', description: 'Special fresh cocktail' }
     },
     price: 7000,
