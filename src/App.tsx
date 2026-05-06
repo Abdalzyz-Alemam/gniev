@@ -6,7 +6,7 @@
 // استيراد المكتبات والمكونات اللازمة لبناء التطبيق
 import { useState, useMemo, lazy, Suspense, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing } from 'lucide-react';
+import { Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing, Utensils } from 'lucide-react';
 import { MENU_DATA, UI_STRINGS } from './constants';
 
 import ProductModal from './components/ProductModal';
@@ -17,7 +17,8 @@ type Language = 'ar' | 'en';
 const CATEGORY_ICONS: Record<string, any> = {
   all: LayoutGrid,
   pizza: Pizza,
-  pies: Sandwich,
+  pies: Utensils,
+  sandwiches: Sandwich,
   juices: CupSoda
 };
 

@@ -204,6 +204,17 @@ export const MENU_DATA = [
     },
     price: 7000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661453/WhatsApp_Image_2026-04-30_at_12.18.12_z73zlt.jpg'
+  },
+  // --- الساندوتشات ---
+  {
+    id: 18,
+    category: 'sandwiches',
+    translations: {
+      ar: { name: 'ساندوتش شاورما', description: 'شاورما دجاج مميزة بتتبيلة قنيف الخاصة' },
+      en: { name: 'Shawarma Sandwich', description: 'Special marinated chicken shawarma' }
+    },
+    price: 10000,
+    image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
@@ -219,6 +230,7 @@ export const UI_STRINGS = {
       all: 'الكل',
       pizza: 'البيتزا',
       pies: 'الفطائر الشامية',
+      sandwiches: 'الساندوتشات',
       juices: 'العصائر'
     },
     itemsFound: 'منتجات',
@@ -246,9 +258,9 @@ export const UI_STRINGS = {
       }
     ],
     notification: {
-      title: 'عفواً زبائننا الكرام',
-      message: 'لتسهيل طلباتكم، نود إحاطتكم بأنه يمكنكم الآن الدفع عبر تطبيقاتنا البنكية مباشرة (بنكك وساهل). تجدون أرقام التحويل أسفل صفحة المنيو. نسعد دائماً بخدمتكم!',
-      button: 'حسناً، فهمت'
+      title: 'بشرى سارة لزبائننا',
+      message: 'يسعدنا إبلاغكم بإضافة قسم الساندوتشات الجديد للمنيو! جربوا شاورما قنيف المميزة الآن. كما نذكركم بإمكانية الدفع عبر تطبيقات بنكك وساهل لتسهيل طلباتكم.',
+      button: 'رائع، استكشف الآن'
     }
   },
   en: {
@@ -261,6 +273,7 @@ export const UI_STRINGS = {
       all: 'All',
       pizza: 'Pizza',
       pies: 'Shami Pies',
+      sandwiches: 'Sandwiches',
       juices: 'Juices'
     },
     itemsFound: 'items',
@@ -288,9 +301,9 @@ export const UI_STRINGS = {
       }
     ],
     notification: {
-      title: 'Dear Customers',
-      message: 'To facilitate your orders, we would like to inform you that you can now pay directly via our banking applications (Bankak & Sahil). You can find the transfer numbers at the bottom of the menu page. We are always happy to serve you!',
-      button: 'Okay, I understand'
+      title: 'New Additions!',
+      message: 'We are excited to announce the addition of a new Sandwiches section to our menu! Try our special Shawarma now. Also, a reminder that you can pay via Bankak & Sahil apps for your convenience.',
+      button: 'Great, Explore Now'
     }
   }
 };
