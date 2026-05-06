@@ -259,29 +259,29 @@ export default function App() {
               initial={{ scale: 0.9, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 20, opacity: 0 }}
-              className="max-w-md w-full bg-[#1a1f2e] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10"
+              className="max-w-sm w-full bg-[#1a1f2e] rounded-[2rem] overflow-hidden shadow-2xl border border-white/10"
             >
-              <div className="bg-[#500b0b] p-8 flex flex-col items-center gap-4 relative overflow-hidden text-center">
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-black/20 rounded-full blur-2xl" />
+              <div className="bg-[#500b0b] p-6 flex flex-col items-center gap-3 relative overflow-hidden text-center">
+                <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/5 rounded-full blur-2xl" />
+                <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-black/20 rounded-full blur-2xl" />
                 
-                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white/80 border border-white/20 backdrop-blur-sm shadow-inner relative z-10 mx-auto">
-                  <BellRing size={28} className="animate-bounce" />
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white/80 border border-white/20 backdrop-blur-sm shadow-inner relative z-10 mx-auto">
+                  <BellRing size={24} className="animate-bounce" />
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-black text-white font-arabic relative z-10 w-full">
+                <h3 className="text-lg md:text-xl font-black text-white font-arabic relative z-10 w-full">
                   {(t as any).notification.title}
                 </h3>
               </div>
               
-              <div className="p-8 pt-6 flex flex-col items-center gap-8">
-                <p className="text-white/70 text-sm md:text-base font-arabic font-light leading-relaxed text-center">
+              <div className="p-6 pt-5 flex flex-col items-center gap-6">
+                <p className="text-white/70 text-xs md:text-sm font-arabic font-light leading-relaxed text-center px-2">
                   {(t as any).notification.message}
                 </p>
                 
                 <button
                   onClick={handleCloseNotification}
-                  className="w-full py-4 px-6 bg-[#500b0b] hover:bg-[#600c0c] text-white rounded-2xl font-arabic font-bold text-sm md:text-base transition-all shadow-lg shadow-black/40 border border-white/5 flex items-center justify-center"
+                  className="w-full py-3 px-6 bg-[#500b0b] hover:bg-[#600c0c] text-white rounded-xl font-arabic font-bold text-xs md:text-sm transition-all shadow-lg shadow-black/40 border border-white/5 flex items-center justify-center"
                 >
                   {(t as any).notification.button}
                 </button>
