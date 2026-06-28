@@ -1,6 +1,6 @@
 // تصدير بيانات المنيو - تحتوي على الأصناف، الفئات، الصور، والأسعار
 export const MENU_DATA = [
-  // --- الفطائر الشامية (12,000 SDG) ---
+  // --- الفطائر الشامية (15,000 SDG) ---
   {
     id: 1,
     category: 'pies',
@@ -8,7 +8,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية قنيف', description: 'فطيرة مميزة بحشوة قنيف الخاصة' },
       en: { name: 'Qunaif Shami Pie', description: 'Special Qunaif signature pie' }
     },
-    price: 14000,
+    price: 15000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -18,7 +18,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية هوت دوق', description: 'فطيرة شامية بحشوة الهوت دوق' },
       en: { name: 'Hot Dog Shami Pie', description: 'Shami pie stuffed with hot dogs' }
     },
-    price: 14000,
+    price: 15000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -28,7 +28,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية فراخ', description: 'فطيرة شامية بحشوة الدجاج المتبل' },
       en: { name: 'Chicken Shami Pie', description: 'Shami pie with seasoned chicken' }
     },
-    price: 14000,
+    price: 15000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -38,7 +38,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية لحمة', description: 'فطيرة شامية بحشوة اللحم المفروم' },
       en: { name: 'Meat Shami Pie', description: 'Shami pie with minced meat' }
     },
-    price: 14000,
+    price: 15000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
   {
@@ -48,7 +48,7 @@ export const MENU_DATA = [
       ar: { name: 'فطيرة شامية خضار', description: 'فطيرة شامية تشكيلة خضروات طازجة' },
       en: { name: 'Veggie Shami Pie', description: 'Shami pie with fresh mixed vegetables' }
     },
-    price: 14000,
+    price: 15000,
     image:  'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660551/WhatsApp_Image_2026-04-29_at_13.03.51_cadhxz.jpg'
   },
 
