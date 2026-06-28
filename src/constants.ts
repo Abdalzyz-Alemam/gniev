@@ -61,9 +61,9 @@ export const MENU_DATA = [
       en: { name: 'Hot Dog Pizza', description: 'Fluffy pizza topped with delicious hot dog pieces' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 36000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 32000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 29000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 38000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 34000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 31000 }
     ],
     price: 31000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660775/WhatsApp_Image_2026-04-28_at_17.23.01_hqwbic.jpg'
@@ -76,9 +76,9 @@ export const MENU_DATA = [
       en: { name: 'Chicken Pizza', description: 'Marinated chicken pieces with mayo and cheese' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 36000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 32000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 29000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 38000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 34000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 31000 }
     ],
     price: 31000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660969/148721-_D8_B7_D8_B1_D9_8A_D9_82_D8_A9-_D8_B9_D9_85_D9_84-_D8_A7_D9_84_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7-_D8_A8_D8_A7_D9_84_D9_81_D8_B1_D8_A7_D8_AE---_D8_B1_D8_A6_D9_8A_D8_B3_D9_8A_D8_A9_gs7drn.jpg'
@@ -91,9 +91,9 @@ export const MENU_DATA = [
       en: { name: 'Meat Pizza', description: 'Fresh minced meat with a variety of veggies' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 36000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 32000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 29000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 38000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 34000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 31000 }
     ],
     price: 31000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777659993/99547-_D8_A8_D9_8A_D8_AA_D8_B2_D8_A7_ovioyj.jpg'
@@ -106,9 +106,9 @@ export const MENU_DATA = [
       en: { name: 'Veggie Pizza', description: 'Thin dough topped with delicious fresh vegetables' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 29000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 26000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 24000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 31000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 28000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 26000 }
     ],
     price: 26000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777660845/WhatsApp_Image_2026-04-28_at_17.23.01_1_c3mlci.jpg'
@@ -121,9 +121,9 @@ export const MENU_DATA = [
       en: { name: 'Gneif Pizza', description: 'Signature pizza with special Gneif toppings' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 36000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 32000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 29000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 38000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 34000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 31000 }
     ],
     price: 31000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661172/WhatsApp_Image_2026-04-29_at_13.03.51_1_nmu0zl.jpg'
@@ -136,9 +136,9 @@ export const MENU_DATA = [
       en: { name: 'Margherita Pizza', description: 'Classic Italian pizza with tomato sauce and mozzarella' }
     },
     variants: [
-      { label: { ar: 'عائلي', en: 'Family' }, price: 36000 },
-      { label: { ar: 'كبيرة', en: 'Large' }, price: 32000 },
-      { label: { ar: 'وسط', en: 'Medium' }, price: 29000 }
+      { label: { ar: 'عائلي', en: 'Family' }, price: 38000 },
+      { label: { ar: 'كبيرة', en: 'Large' }, price: 34000 },
+      { label: { ar: 'وسط', en: 'Medium' }, price: 31000 }
     ],
     price: 31000,
     image: 'https://tse3.mm.bing.net/th/id/OIP.IrxEvPdXAO3qT06Wl8ufYQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
