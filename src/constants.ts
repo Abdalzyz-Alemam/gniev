@@ -182,7 +182,7 @@ export const MENU_DATA = [
       ar: { name: 'موز باللبن', description: '' },
       en: { name: 'Banana Milk', description: 'Classic banana with milk' }
     },
-    price: 3500,
+    price: 5000,
     image: 'https://res.cloudinary.com/da9bnd33u/image/upload/w_400,q_auto,f_auto/v1777661452/WhatsApp_Image_2026-04-30_at_12.18.12_1_mxsq1m.jpg'
   },
   {
