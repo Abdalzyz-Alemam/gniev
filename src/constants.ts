@@ -241,8 +241,8 @@ export const UI_STRINGS = {
       {
         id: 'bankak',
         app: 'تطبيق بنكك - Bankak',
-        number: '3433613',
-        name: 'نزار المهدي احمد المهدي',
+        number: '9056206',
+        name: 'محمد عماد الدين البشير',
         type: 'bankak',
         copyLabel: 'نسخ الرقم'
       },
@@ -284,8 +284,8 @@ export const UI_STRINGS = {
       {
         id: 'bankak',
         app: 'Bankak - تطبيق بنكك',
-        number: '3433613',
-        name: 'Nezar Al-Mahdi Ahmed Al-Mahdi',
+        number: '9056206',
+        name: 'Mohamed Emad El-Din El-Bashir',
         type: 'bankak',
         copyLabel: 'Copy Number'
       },
