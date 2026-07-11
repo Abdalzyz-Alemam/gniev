@@ -6,20 +6,39 @@
 // استيراد المكتبات والمكونات اللازمة لبناء التطبيق
 import { useState, useMemo, lazy, Suspense, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing, Utensils } from 'lucide-react';
+import { 
+  Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, 
+  Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing, 
+  Utensils, Cake, Coffee, IceCream, Soup, Flame, Heart, Sparkles, ChefHat, Cookie, 
+  Croissant, Salad, Apple 
+} from 'lucide-react';
 import { MENU_DATA, UI_STRINGS } from './constants';
 
 import ProductModal from './components/ProductModal';
+import AdminPanel from './components/AdminPanel';
+import { isSupabaseConfigured, fetchAllFromSupabase } from './lib/supabase';
 
 type Language = 'ar' | 'en';
 
-// خريطة أيقونات الفئات لتشبه التصميم المطلوب
-const CATEGORY_ICONS: Record<string, any> = {
-  all: LayoutGrid,
-  pizza: Pizza,
-  pies: Utensils,
-  sandwiches: Sandwich,
-  juices: CupSoda
+// خريطة أيقونات الفئات لتشبه التصميم المطلوب وتدعم الإضافة والتخصيص
+export const ICON_MAP: Record<string, any> = {
+  LayoutGrid,
+  Pizza,
+  Sandwich,
+  CupSoda,
+  Utensils,
+  Cake,
+  Coffee,
+  IceCream,
+  Soup,
+  Flame,
+  Heart,
+  Sparkles,
+  ChefHat,
+  Cookie,
+  Croissant,
+  Salad,
+  Apple
 };
 
 export default function App() {
@@ -31,11 +50,104 @@ export default function App() {
   const [showWelcome, setShowWelcome] = useState(true);
   const [showNotification, setShowNotification] = useState(false);
 
-  const t = UI_STRINGS[lang];
+  // تحميل البيانات ديناميكياً من التخزين المحلي أو الثوابت كقيمة افتراضية
+  const [menuItems, setMenuItems] = useState<any[]>(() => {
+    const saved = localStorage.getItem('qunaif_menu_items');
+    return saved ? JSON.parse(saved) : MENU_DATA;
+  });
+
+  const [uiStrings, setUiStrings] = useState<any>(() => {
+    const saved = localStorage.getItem('qunaif_ui_strings');
+    return saved ? JSON.parse(saved) : UI_STRINGS;
+  });
+
+  const [categoryIcons, setCategoryIcons] = useState<Record<string, string>>(() => {
+    const saved = localStorage.getItem('qunaif_category_icons');
+    return saved ? JSON.parse(saved) : {
+      all: 'LayoutGrid',
+      pizza: 'Pizza',
+      pies: 'Utensils',
+      sandwiches: 'Sandwich',
+      juices: 'CupSoda'
+    };
+  });
+
+  const [welcomeStrings, setWelcomeStrings] = useState<any>(() => {
+    const saved = localStorage.getItem('qunaif_welcome_strings');
+    const defaultWelcome = {
+      ar: {
+        title: "مرحباً بك في سلسلة مطاعم قنيف",
+        message: "حيث تلتقي الأصالة بالمذاق الذي يسعد قلبك.. نحن هنا لنقدم لك تجربة لا تُنسى في عالم البيتزا والفطائر بكل حب.",
+        button: "استكشف المنيو"
+      },
+      en: {
+        title: "Welcome to Qneiv Chain",
+        message: "Where authenticity meets the taste that delights your heart.. We are here to offer you an unforgettable experience made with love.",
+        button: "Explore Menu"
+      }
+    };
+    return saved ? JSON.parse(saved) : defaultWelcome;
+  });
+
+  // مسار الصفحة الحالي للتوجيه التلقائي للوحة التحكم
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handleLocationChange);
+
+    // تتبع التنقل في الصفحة الفردية
+    const originalPushState = window.history.pushState;
+    window.history.pushState = function (...args) {
+      const result = originalPushState.apply(this, args);
+      handleLocationChange();
+      return result;
+    };
+    const originalReplaceState = window.history.replaceState;
+    window.history.replaceState = function (...args) {
+      const result = originalReplaceState.apply(this, args);
+      handleLocationChange();
+      return result;
+    };
+
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+    };
+  }, []);
+
+  const t = uiStrings[lang];
   const isRtl = lang === 'ar';
 
   useEffect(() => {
-    // إزالة التنبيه التلقائي بالوقت
+    // جلب البيانات من سوبابيس تلقائياً إذا كانت مهيأة
+    if (isSupabaseConfigured) {
+      fetchAllFromSupabase()
+        .then((data) => {
+          if (data.menuItems) {
+            setMenuItems(data.menuItems);
+            localStorage.setItem('qunaif_menu_items', JSON.stringify(data.menuItems));
+          }
+          if (data.uiStrings) {
+            setUiStrings(data.uiStrings);
+            localStorage.setItem('qunaif_ui_strings', JSON.stringify(data.uiStrings));
+          }
+          if (data.categoryIcons) {
+            setCategoryIcons(data.categoryIcons);
+            localStorage.setItem('qunaif_category_icons', JSON.stringify(data.categoryIcons));
+          }
+          if (data.welcomeStrings) {
+            setWelcomeStrings(data.welcomeStrings);
+            localStorage.setItem('qunaif_welcome_strings', JSON.stringify(data.welcomeStrings));
+          }
+        })
+        .catch((err) => {
+          console.error('Failed to load initial Supabase data:', err);
+        });
+    }
   }, []);
 
   const enterMenu = () => {
@@ -47,28 +159,17 @@ export default function App() {
     setShowNotification(false);
   };
 
-  const welcome = {
-    ar: {
-      title: "مرحباً بك في سلسلة مطاعم قنيف",
-      message: "حيث تلتقي الأصالة بالمذاق الذي يسعد قلبك.. نحن هنا لنقدم لك تجربة لا تُنسى في عالم البيتزا والفطائر بكل حب.",
-      button: "استكشف المنيو"
-    },
-    en: {
-      title: "Welcome to Qneiv Chain",
-      message: "Where authenticity meets the taste that delights your heart.. We are here to offer you an unforgettable experience made with love.",
-      button: "Explore Menu"
-    }
-  }[lang];
+  const welcome = welcomeStrings[lang];
 
   const filteredItems = useMemo(() => {
-    return MENU_DATA.filter((item) => {
+    return menuItems.filter((item) => {
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
       const matchesSearch = 
         item.translations.en.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.translations.ar.name.includes(searchQuery);
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [menuItems, selectedCategory, searchQuery]);
 
   const categories = Object.entries(t.categories);
 
@@ -85,6 +186,24 @@ export default function App() {
       }, 2000);
     }
   };
+
+  if (currentPath === '/admin') {
+    return (
+      <AdminPanel 
+        menuItems={menuItems}
+        setMenuItems={setMenuItems}
+        uiStrings={uiStrings}
+        setUiStrings={setUiStrings}
+        welcomeStrings={welcomeStrings}
+        setWelcomeStrings={setWelcomeStrings}
+        categoryIcons={categoryIcons}
+        setCategoryIcons={setCategoryIcons}
+        onClose={() => {
+          window.history.pushState({}, '', '/');
+        }}
+      />
+    );
+  }
 
   return (
     <div 
@@ -398,7 +517,8 @@ export default function App() {
         <h2 className="sr-only">{lang === 'ar' ? 'فئات المنيو' : 'Menu Categories'}</h2>
         <div className="flex overflow-x-auto gap-3 md:gap-4 pb-6 md:pb-8 no-scrollbar snap-x justify-start md:justify-center -mt-8 md:-mt-16 relative z-30 px-2">
           {categories.map(([key, label]) => {
-            const Icon = CATEGORY_ICONS[key] || LayoutGrid;
+            const iconName = categoryIcons[key] || 'LayoutGrid';
+            const Icon = ICON_MAP[iconName] || LayoutGrid;
             return (
               <button
                 key={key}
