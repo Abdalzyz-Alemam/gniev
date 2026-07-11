@@ -10,7 +10,7 @@ import {
   Search, Languages, Facebook, Pizza, Sandwich, CupSoda, LayoutGrid, Ghost, 
   Wallet, Copy, Check, Landmark, Smartphone, MessageCircle, Megaphone, BellRing, 
   Utensils, Cake, Coffee, IceCream, Soup, Flame, Heart, Sparkles, ChefHat, Cookie, 
-  Croissant, Salad, Apple 
+  Croissant, Salad, Apple, Settings
 } from 'lucide-react';
 import { MENU_DATA, UI_STRINGS } from './constants';
 
@@ -89,12 +89,27 @@ export default function App() {
     return saved ? JSON.parse(saved) : defaultWelcome;
   });
 
-  // مسار الصفحة الحالي للتوجيه التلقائي للوحة التحكم
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  // مسار الصفحة الحالي للتوجيه التلقائي للوحة التحكم مع دعم fallback مثل ?admin أو #admin لتفادي مشاكل الـ 404 في Vercel
+  const [currentPath, setCurrentPath] = useState(() => {
+    const path = window.location.pathname;
+    const hasAdminQuery = window.location.search.includes('admin');
+    const hasAdminHash = window.location.hash.includes('admin');
+    if (path === '/admin' || hasAdminQuery || hasAdminHash) {
+      return '/admin';
+    }
+    return path;
+  });
 
   useEffect(() => {
     const handleLocationChange = () => {
-      setCurrentPath(window.location.pathname);
+      const path = window.location.pathname;
+      const hasAdminQuery = window.location.search.includes('admin');
+      const hasAdminHash = window.location.hash.includes('admin');
+      if (path === '/admin' || hasAdminQuery || hasAdminHash) {
+        setCurrentPath('/admin');
+      } else {
+        setCurrentPath(path);
+      }
     };
     window.addEventListener('popstate', handleLocationChange);
 
@@ -765,6 +780,19 @@ export default function App() {
                 Ezoo-Tech
               </span>
             </a>
+
+            {/* زر لوحة التحكم السريعة والآمنة لتفادي الـ 404 */}
+            <button 
+              onClick={() => {
+                window.history.pushState({}, '', '/admin');
+                setCurrentPath('/admin');
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-all text-[10px] font-arabic border border-white/5 cursor-pointer shadow-sm"
+              title="لوحة التحكم"
+            >
+              <Settings size={12} className="text-liver-light" />
+              <span>لوحة التحكم</span>
+            </button>
           </div>
         </div>
       </footer>
