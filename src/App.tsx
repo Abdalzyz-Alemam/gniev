@@ -53,22 +53,57 @@ export default function App() {
   // تحميل البيانات ديناميكياً من التخزين المحلي أو الثوابت كقيمة افتراضية
   const [menuItems, setMenuItems] = useState<any[]>(() => {
     const saved = localStorage.getItem('qunaif_menu_items');
-    return saved ? JSON.parse(saved) : MENU_DATA;
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      const hasOrders = parsed.some((item: any) => item.category === 'orders');
+      if (!hasOrders) {
+        const newItems = MENU_DATA.filter((item: any) => item.category === 'orders');
+        const updated = [...parsed, ...newItems];
+        localStorage.setItem('qunaif_menu_items', JSON.stringify(updated));
+        return updated;
+      }
+      return parsed;
+    }
+    return MENU_DATA;
   });
 
   const [uiStrings, setUiStrings] = useState<any>(() => {
     const saved = localStorage.getItem('qunaif_ui_strings');
-    return saved ? JSON.parse(saved) : UI_STRINGS;
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (!parsed.ar.categories.orders) {
+        parsed.ar.categories = {
+          ...parsed.ar.categories,
+          orders: 'الطلبات'
+        };
+        parsed.en.categories = {
+          ...parsed.en.categories,
+          orders: 'Orders'
+        };
+        localStorage.setItem('qunaif_ui_strings', JSON.stringify(parsed));
+      }
+      return parsed;
+    }
+    return UI_STRINGS;
   });
 
   const [categoryIcons, setCategoryIcons] = useState<Record<string, string>>(() => {
     const saved = localStorage.getItem('qunaif_category_icons');
-    return saved ? JSON.parse(saved) : {
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (!parsed.orders) {
+        parsed.orders = 'ChefHat';
+        localStorage.setItem('qunaif_category_icons', JSON.stringify(parsed));
+      }
+      return parsed;
+    }
+    return {
       all: 'LayoutGrid',
       pizza: 'Pizza',
       pies: 'Utensils',
       sandwiches: 'Sandwich',
-      juices: 'CupSoda'
+      juices: 'CupSoda',
+      orders: 'ChefHat'
     };
   });
 

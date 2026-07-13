@@ -215,6 +215,47 @@ export const MENU_DATA = [
     },
     price: 10000,
     image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=800&auto=format&fit=crop'
+  },
+  // --- الطلبات ---
+  {
+    id: 19,
+    category: 'orders',
+    translations: {
+      ar: { name: 'فراخ مشوي كامل', description: 'فرخة كاملة مشوية على الفحم متبلة بالبهارات الخاصة' },
+      en: { name: 'Whole Grilled Chicken', description: 'Whole chicken grilled on charcoal with special spices' }
+    },
+    price: 60000,
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1778353251/OIP.fF8alMVyzIdtE3IjKPf9EwHaEK_nbmdbu.webp'
+  },
+  {
+    id: 20,
+    category: 'orders',
+    translations: {
+      ar: { name: 'فراخ مشوي نص', description: 'نصف فرخة مشوية على الفحم متبلة بالخلطة السرية' },
+      en: { name: 'Half Grilled Chicken', description: 'Half chicken grilled on charcoal with secret marinade' }
+    },
+    price: 30000,
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1778353251/OIP.fF8alMVyzIdtE3IjKPf9EwHaEK_nbmdbu.webp'
+  },
+  {
+    id: 21,
+    category: 'orders',
+    translations: {
+      ar: { name: 'شيش طاووق', description: 'شيش طاووق دجاج مشوي متبل يقدم ساخناً' },
+      en: { name: 'Shish Taouk', description: 'Grilled marinated chicken shish taouk skewers served hot' }
+    },
+    price: 12000,
+    image: 'https://res.cloudinary.com/da9bnd33u/image/upload/v1778870944/D8_B7_D8_B1_D9_8A_D9_82_D8_A9__D8_B9_D9_85_D9_84__D8_A7_D9_84_D8_B4_D9_8A_D8_B4__D9_83_D8_A8_D8_A7_D8_A8_hx95g6.jpg'
+  },
+  {
+    id: 22,
+    category: 'orders',
+    translations: {
+      ar: { name: 'كرسبي', description: 'قطع الدجاج المقرمشة الذهبية بالطريقة الخاصة' },
+      en: { name: 'Crispy', description: 'Golden crispy chicken pieces made in our special style' }
+    },
+    price: 12000,
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
@@ -231,7 +272,8 @@ export const UI_STRINGS = {
       pizza: 'البيتزا',
       pies: 'الفطائر الشامية',
       sandwiches: 'الساندوتشات',
-      juices: 'العصائر'
+      juices: 'العصائر',
+      orders: 'الطلبات'
     },
     itemsFound: 'منتجات',
     paymentTitle: 'وسائل الدفع المتاحة',
@@ -274,7 +316,8 @@ export const UI_STRINGS = {
       pizza: 'Pizza',
       pies: 'Shami Pies',
       sandwiches: 'Sandwiches',
-      juices: 'Juices'
+      juices: 'Juices',
+      orders: 'Orders'
     },
     itemsFound: 'items',
     paymentTitle: 'Available Payment Methods',
