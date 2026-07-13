@@ -815,19 +815,6 @@ export default function App() {
                 Ezoo-Tech
               </span>
             </a>
-
-            {/* زر لوحة التحكم السريعة والآمنة لتفادي الـ 404 */}
-            <button 
-              onClick={() => {
-                window.history.pushState({}, '', '/admin');
-                setCurrentPath('/admin');
-              }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-all text-[10px] font-arabic border border-white/5 cursor-pointer shadow-sm"
-              title="لوحة التحكم"
-            >
-              <Settings size={12} className="text-liver-light" />
-              <span>لوحة التحكم</span>
-            </button>
           </div>
         </div>
       </footer>
