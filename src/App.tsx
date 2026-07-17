@@ -135,6 +135,20 @@ export default function App() {
     return path;
   });
 
+  const [logoClicks, setLogoClicks] = useState(0);
+
+  const handleLogoClick = () => {
+    setLogoClicks(prev => {
+      const next = prev + 1;
+      if (next >= 5) {
+        window.history.pushState({}, '', '/admin');
+        setCurrentPath('/admin');
+        return 0;
+      }
+      return next;
+    });
+  };
+
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname;
@@ -511,8 +525,12 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           className="relative z-10 flex flex-col items-center text-center px-4"
         >
-          {/* اللوجو الدائري */}
-          <div className="w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-liver-light bg-liver p-2 shadow-2xl mb-4 md:mb-6 flex items-center justify-center overflow-hidden">
+          {/* اللوجو الدائري - انقر 5 مرات للدخول للوحة التحكم */}
+          <div 
+            onClick={handleLogoClick}
+            className="w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-liver-light bg-liver p-2 shadow-2xl mb-4 md:mb-6 flex items-center justify-center overflow-hidden cursor-pointer select-none active:scale-95 transition-transform"
+            title="انقر 5 مرات للدخول للوحة التحكم"
+          >
             <div className="w-full h-full rounded-full border-2 border-liver-light/50 flex flex-col items-center justify-center p-2 text-liver-light">
                <span className="text-2xl md:text-3xl font-black">قنيف</span>
                <div className="w-full h-[1px] bg-liver-light my-1" />
