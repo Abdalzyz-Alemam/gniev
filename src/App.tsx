@@ -811,13 +811,13 @@ export default function App() {
              </p>
           </div>
 
-          <div className="flex items-center gap-3 mb-6 opacity-10">
+          <div className="flex items-center justify-center gap-3 mb-6 opacity-10">
              <div className="h-px w-10 bg-white" />
              <div className="w-1 h-1 rounded-full bg-liver-light" />
              <div className="h-px w-10 bg-white" />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
             <p className="text-white/70 text-[9px] md:text-[10px] tracking-widest uppercase font-sans">
               © {new Date().getFullYear()} • {t.title}
             </p>
