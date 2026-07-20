@@ -41,6 +41,10 @@ export const ICON_MAP: Record<string, any> = {
   Apple
 };
 
+// هل المنيو تحت الصيانة حالياً؟
+// غير القيمة إلى false لتفعيل المنيو وعرض الوجبات من جديد، أو true لإيقاف المنيو مؤقتاً وعرض رسالة الصيانة.
+const isUnderMaintenance = true;
+
 export default function App() {
   const [lang, setLang] = useState<Language>('ar');
   const [searchQuery, setSearchQuery] = useState('');
@@ -492,13 +496,15 @@ export default function App() {
 
         {/* أزرار التحكم الجانبية */}
         <div className="absolute top-6 right-6 flex gap-3 z-20">
-          <button 
-            onClick={() => setIsSearchOpen(!isSearchOpen)}
-            aria-label={lang === 'ar' ? 'بحث' : 'Search'}
-            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-liver transition-colors border border-white/20"
-          >
-            <Search size={18} className="text-white" />
-          </button>
+          {!isUnderMaintenance && (
+            <button 
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              aria-label={lang === 'ar' ? 'بحث' : 'Search'}
+              className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-liver transition-colors border border-white/20"
+            >
+              <Search size={18} className="text-white" />
+            </button>
+          )}
           <button 
             onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
             aria-label={lang === 'ar' ? 'تغيير اللغة' : 'Change Language'}
@@ -579,111 +585,136 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <main className="max-w-5xl mx-auto px-4 py-6 md:py-8">
-        
-        {/* 3. شريط اختيار الفئات - تصميم المربعات الذهبية */}
-        <h2 className="sr-only">{lang === 'ar' ? 'فئات المنيو' : 'Menu Categories'}</h2>
-        <div className="flex overflow-x-auto gap-3 md:gap-4 pb-6 md:pb-8 no-scrollbar snap-x justify-start md:justify-center -mt-8 md:-mt-16 relative z-30 px-2">
-          {categories.map(([key, label]) => {
-            const iconName = categoryIcons[key] || 'LayoutGrid';
-            const Icon = ICON_MAP[iconName] || LayoutGrid;
-            return (
-              <button
-                key={key}
-                onClick={() => setSelectedCategory(key)}
-                className="flex flex-col items-center gap-2 group snap-start"
-              >
-                <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-lg ${
-                  selectedCategory === key 
-                    ? 'bg-liver text-white scale-110 rotate-3 ring-4 ring-liver/30' 
-                    : 'bg-white text-liver hover:bg-liver/10 border border-liver/20'
-                }`}>
-                  <Icon size={selectedCategory === key ? 32 : 28} strokeWidth={2.5} />
-                </div>
-                <span className={`text-xs md:text-sm font-bold transition-colors ${
-                  selectedCategory === key ? 'text-liver' : 'text-neutral-500'
-                }`}>
-                  {label}
-                </span>
-                {selectedCategory === key && (
-                  <motion.div layoutId="underline" className="h-1 w-8 bg-liver rounded-full mt-1" />
-                )}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* 4. شبكة عرض المنتجات - تخطيط عمودي (2 في الصف على الهاتف) وتصميم متجاوب */}
-        <h2 className="sr-only">{lang === 'ar' ? 'الأصناف' : 'Items'}</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
-          <AnimatePresence mode="popLayout">
-            {filteredItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setSelectedItem(item)}
-                className="flex flex-col h-auto rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-xl border-2 md:border-4 border-white group cursor-pointer bg-liver relative"
-              >
-                {/* صورة المنتج */}
-                <div className="aspect-[4/3] w-full overflow-hidden relative">
-                  <img 
-                    src={item.image.includes('unsplash.com') ? `${item.image.split('?')[0]}?q=60&w=400&h=300&auto=format&fit=crop` : item.image} 
-                    alt={item.translations[lang].name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading={index < 4 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    width="400"
-                    height="300"
-                    fetchPriority={index < 2 ? 'high' : 'auto'}
-                  />
-                </div>
-                
-                {/* معلومات المنتج */}
-                <div className="p-3 md:p-6 flex flex-col items-center text-white text-center bg-gradient-to-b from-liver to-liver-dark">
-                  <h3 className="text-sm md:text-xl font-bold font-arabic mb-1">
-                    {item.translations[lang].name}
-                  </h3>
-                  
-                  <div className="w-full">
-                    {(item as any).variants ? (
-                      <div className="text-[10px] md:text-sm font-medium opacity-80 font-arabic flex flex-wrap justify-center gap-x-2">
-                        {(item as any).variants.map((v: any, i: number) => (
-                          <span key={i} className="whitespace-nowrap">
-                            {v.label[lang]} <span className="font-bold">{v.price.toLocaleString()}</span>
-                            {i < (item as any).variants.length - 1 && <span className="mx-1 text-white/50">|</span>}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-1">
-                        <span className="text-white font-black text-lg md:text-2xl">
-                          {item.price.toLocaleString()}
-                        </span>
-                        <span className="text-[10px] md:text-xs font-bold opacity-80">
-                          {t.currency}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-
-        {/* رسالة تظهر عندما لا توجد نتائج مطابقة لعملية البحث */}
-        {filteredItems.length === 0 && (
-          <div className="text-center py-20 flex flex-col items-center">
-            <Ghost size={64} className="text-neutral-300 mb-4" />
-            <p className="text-neutral-400 text-lg">
-              {lang === 'ar' ? 'لا توجد منتجات تطابق بحثك' : 'No products match your search'}
+      {isUnderMaintenance ? (
+        <main className="max-w-4xl mx-auto px-4 py-16 text-center flex flex-col items-center justify-center min-h-[35vh]">
+          <motion.div 
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white rounded-[2rem] border-2 border-liver/10 p-8 md:p-12 shadow-2xl max-w-lg w-full flex flex-col items-center relative overflow-hidden"
+          >
+            {/* شريط جمالي علوي */}
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-liver-light via-liver to-liver-light" />
+            
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-liver/10 flex items-center justify-center text-liver mb-6 animate-pulse">
+              <Settings size={36} className="stroke-[1.5]" />
+            </div>
+            
+            <h2 className="text-xl md:text-2xl font-black text-liver mb-3 font-arabic">
+              عذراً، المنيو تحت الصيانة
+            </h2>
+            
+            <p className="text-neutral-600 text-sm md:text-base font-arabic leading-relaxed">
+              شكراً لتفهمكم، سنعود للعمل قريباً لتزويدكم بأشهى الوجبات.
             </p>
+          </motion.div>
+        </main>
+      ) : (
+        <main className="max-w-5xl mx-auto px-4 py-6 md:py-8">
+          
+          {/* 3. شريط اختيار الفئات - تصميم المربعات الذهبية */}
+          <h2 className="sr-only">{lang === 'ar' ? 'فئات المنيو' : 'Menu Categories'}</h2>
+          <div className="flex overflow-x-auto gap-3 md:gap-4 pb-6 md:pb-8 no-scrollbar snap-x justify-start md:justify-center -mt-8 md:-mt-16 relative z-30 px-2">
+            {categories.map(([key, label]) => {
+              const iconName = categoryIcons[key] || 'LayoutGrid';
+              const Icon = ICON_MAP[iconName] || LayoutGrid;
+              return (
+                <button
+                  key={key}
+                  onClick={() => setSelectedCategory(key)}
+                  className="flex flex-col items-center gap-2 group snap-start"
+                >
+                  <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-lg ${
+                    selectedCategory === key 
+                      ? 'bg-liver text-white scale-110 rotate-3 ring-4 ring-liver/30' 
+                      : 'bg-white text-liver hover:bg-liver/10 border border-liver/20'
+                  }`}>
+                    <Icon size={selectedCategory === key ? 32 : 28} strokeWidth={2.5} />
+                  </div>
+                  <span className={`text-xs md:text-sm font-bold transition-colors ${
+                    selectedCategory === key ? 'text-liver' : 'text-neutral-500'
+                  }`}>
+                    {label}
+                  </span>
+                  {selectedCategory === key && (
+                    <motion.div layoutId="underline" className="h-1 w-8 bg-liver rounded-full mt-1" />
+                  )}
+                </button>
+              );
+            })}
           </div>
-        )}
-      </main>
+
+          {/* 4. شبكة عرض المنتجات - تخطيط عمودي (2 في الصف على الهاتف) وتصميم متجاوب */}
+          <h2 className="sr-only">{lang === 'ar' ? 'الأصناف' : 'Items'}</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+            <AnimatePresence mode="popLayout">
+              {filteredItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => setSelectedItem(item)}
+                  className="flex flex-col h-auto rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-xl border-2 md:border-4 border-white group cursor-pointer bg-liver relative"
+                >
+                  {/* صورة المنتج */}
+                  <div className="aspect-[4/3] w-full overflow-hidden relative">
+                    <img 
+                      src={item.image.includes('unsplash.com') ? `${item.image.split('?')[0]}?q=60&w=400&h=300&auto=format&fit=crop` : item.image} 
+                      alt={item.translations[lang].name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading={index < 4 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      width="400"
+                      height="300"
+                      fetchPriority={index < 2 ? 'high' : 'auto'}
+                    />
+                  </div>
+                  
+                  {/* معلومات المنتج */}
+                  <div className="p-3 md:p-6 flex flex-col items-center text-white text-center bg-gradient-to-b from-liver to-liver-dark">
+                    <h3 className="text-sm md:text-xl font-bold font-arabic mb-1">
+                      {item.translations[lang].name}
+                    </h3>
+                    
+                    <div className="w-full">
+                      {(item as any).variants ? (
+                        <div className="text-[10px] md:text-sm font-medium opacity-80 font-arabic flex flex-wrap justify-center gap-x-2">
+                          {(item as any).variants.map((v: any, i: number) => (
+                            <span key={i} className="whitespace-nowrap">
+                              {v.label[lang]} <span className="font-bold">{v.price.toLocaleString()}</span>
+                              {i < (item as any).variants.length - 1 && <span className="mx-1 text-white/50">|</span>}
+                            </span>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-center gap-1">
+                          <span className="text-white font-black text-lg md:text-2xl">
+                            {item.price.toLocaleString()}
+                          </span>
+                          <span className="text-[10px] md:text-xs font-bold opacity-80">
+                            {t.currency}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+
+          {/* رسالة تظهر عندما لا توجد نتائج مطابقة لعملية البحث */}
+          {filteredItems.length === 0 && (
+            <div className="text-center py-20 flex flex-col items-center">
+              <Ghost size={64} className="text-neutral-300 mb-4" />
+              <p className="text-neutral-400 text-lg">
+                {lang === 'ar' ? 'لا توجد منتجات تطابق بحثك' : 'No products match your search'}
+              </p>
+            </div>
+          )}
+        </main>
+      )}
 
       {/* 5. نافذة التفاصيل المنبثقة (Product Modal) */}
       <AnimatePresence>
