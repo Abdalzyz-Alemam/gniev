@@ -43,7 +43,7 @@ export const ICON_MAP: Record<string, any> = {
 
 // هل المنيو تحت الصيانة حالياً؟
 // غير القيمة إلى false لتفعيل المنيو وعرض الوجبات من جديد، أو true لإيقاف المنيو مؤقتاً وعرض رسالة الصيانة.
-const isUnderMaintenance = true;
+const isUnderMaintenance = false;
 
 export default function App() {
   const [lang, setLang] = useState<Language>('ar');
